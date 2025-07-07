@@ -33,7 +33,8 @@ public class Temperatura {
 
     int maior = diasDaSemana[0];
     int menor = diasDaSemana[0];
-
+    int soma=0;
+    
     for (int i = 1; i < 7; i++){
         System.out.println("Informe a temperatuda do dia "+(i+1)+" : ");
         diasDaSemana[i] = scanner.nextInt();
@@ -44,11 +45,14 @@ public class Temperatura {
             menor = diasDaSemana[i];
         }
 
-        mediaDaSemana = mediaDaSemana + diasDaSemana[i];
+        soma = soma + diasDaSemana[i];
     }
+        mediaDaSemana = soma / 7; 
 
+        System.out.println("A tempertatura media da semana foi de : "+mediaDaSemana+" graus");
         System.out.println("O dia mais quente foi o qual registrou : "+maior+ " graus.");
         System.out.println("O dia menos quente foi o qual registrou : "+menor+ " graus.");
+
 
 
 }}
